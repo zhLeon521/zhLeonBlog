@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-28 11:49:21
- * @LastEditTime: 2021-05-30 17:19:00
+ * @LastEditTime: 2021-05-30 23:46:24
  * @FilePath: \zhleon\pages\index.js
  */
 import SelectorIcon from 'heroicons/outline/selector.svg';
@@ -88,7 +88,7 @@ export default function Home() {
               </button>
             </div>
           </nav>
-{/* 第二个导航条开始 */}
+          {/* 第二个导航条开始 */}
           <div className="max-w-5xl mx-auto px-6">
             <nav className="-mb-px flex space-x-5 text-sm leading-5">
               <Link href="#">
@@ -116,8 +116,51 @@ export default function Home() {
           </div>
         </header >
         {/* 最上面导航部分结束 */}
+
+        <div className="max-w-5xl mx-auto flex items-center justify-between px-6 pt-14 pb-28">
+          {/* 左边 */}
+          <div className="flex space-x-8">
+            {/* 头像 */}
+            <div>
+              <img className="h-24 w-24 rounded-full" src="/Avatar.svg" />
+            </div>
+            <div className="flex flex-col justify-between p-1 space-y-4">
+              <div className="flex items-center space-x-4">
+                <h1 className="text-4xl leading-10 font-bold">Blueheart</h1>
+                <span className="mt-1 inline-flex rounded-full bg-gray-50 border border-gray-200 text-xs leading-4 px-2 py-0.5 font-medium text-black uppercase tracking-wide">
+                  hobby</span>
+              </div>
+              <div >
+                <dl>
+                  <Link href="https://github.com/zhLeon521" >
+                    <a target="_blank" className="flex items-center space-x-2 text-sm leading-5 font-bold text-gray-500">
+                      <img className="h-3.5 w-3.5" src="/github.svg" alt="githubLogo" />
+                      <span>zhLeon521</span>
+                    </a>
+                  </Link>
+
+                  <dd className="text-xs leading-5 font-bold text-black uppercase tracking-wide">
+                    🤣 FullStack Developer
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          {/* 右边 */}
+          <div className="grid grid-cols-2 gap-x-7">
+            <Link href="#">
+              <a className="inline-flex justify-between rounded border border-gray-200  bg-white px-6 py-3 text-sm leading-5 font-semibold text-gray-500 hover:border-black hover:text-black transition ease-in-out duration-150">
+                Quick View</a>
+            </Link>
+            <Link href="#">
+              <a className="inline-flex items-center justify-between rounded border border-transparent bg-black px-7 py-3 text-sm leading-5 font-medium text-white hover:bg-white hover:border-black hover:text-black transition ease-in-out duration-150">
+                Enter Blog</a>
+            </Link>
+          </div>
+
+        </div>
       </ div >
-    </div>
+    </div >
 
 
   )
