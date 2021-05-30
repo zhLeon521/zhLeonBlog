@@ -1,82 +1,84 @@
-import Head from 'next/head'
+/*
+ * @Description: 
+ * @Autor: Blueheart
+ * @Date: 2021-05-28 11:49:21
+ * @LastEditTime: 2021-05-30 15:18:44
+ * @FilePath: \zhleon\pages\index.js
+ */
+import SelectorIcon from 'heroicons/outline/selector.svg';
+import DotsHorizontal from 'heroicons/solid/dots-horizontal.svg'
+import Link from 'next/link';
 
+function VercelLogo({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 1155 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M577.344 0L1154.69 1000H0L577.344 0Z" fill="black" />
+    </svg>
+
+  )
+}
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      {/* 最顶端 */}
+      < div className="bg-white">
+        <header>
+          <nav className="max-w-5xl mx-auto pt-5">
+            {/* 最上面导航，左侧 */}
+            <div className="flex items-center space-x-2">
+              <VercelLogo className="h-6" />
+              <span>
+                <svg
+                  className="h-8 w-8 text-gray-300"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" fill="none" >
+                  <path d="M16.88 3.549L7.12 20.451"></path>
+                </svg>
+              </span>
+              {/* 最上面logo + 姓名文字 */}
+              <span className="inline-flex items-center space-x-2 ">
+                <Link href="#">
+                  <a className="inline-flex items-center space-x-2">
+                    <span>
+                      <img
+                        className="h-7 w-7 rounded-full border border-gray-200"
+                        src="/avatar.svg" alt="" />
+                    </span>
+                    <span className="text-sm text-black-300 font-semibold antialiased">Blueheart  Leon</span>
+                  </a>
+                </Link>
+                <button className="inline-flex items-center border rounded-md border-transparent p-0.2 hover:border-gray-200 hover:boder-gray-50 transition ease-in-out duration-200">
+                  <SelectorIcon className="h-5 w-5 text-gray-300 " />
+                </button>
+              </span>
+            </div>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+            <div>
+              <button type='button' >
+                Feedback
+              </button>
+              <Link href="#">
+                <a>Blog</a>
+              </Link>
+              <Link href="#">
+                <a>Support</a>
+              </Link>
+              <Link href="#">
+                <a>Docs</a>
+              </Link>
+              <button type="button">
+                <DotsHorizontal />
+              </button>
+              <button type="button">
+                <img src="/avatar.svg" alt="zhLeon" />
+              </button>
+            </div>
+          </nav>
+        </header >
+      </ div >
     </div>
+
+
   )
+
 }
