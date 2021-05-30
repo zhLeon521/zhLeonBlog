@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-28 11:49:21
- * @LastEditTime: 2021-05-30 16:10:47
+ * @LastEditTime: 2021-05-30 17:19:00
  * @FilePath: \zhleon\pages\index.js
  */
 import SelectorIcon from 'heroicons/outline/selector.svg';
@@ -18,10 +18,10 @@ function VercelLogo({ className }) {
 }
 
 
-function Avatar({ src, alt=' '}) {
+function Avatar({ src, alt = ' ' }) {
   return (
     <img
-    className="h-8 w-8 rounded-full border border-gray-200"
+      className="h-8 w-8 rounded-full border border-gray-200"
       src={src}
       alt={alt} />
   )
@@ -31,11 +31,16 @@ export default function Home() {
     <div>
       {/* 最顶端 */}
       < div className="bg-white">
-        <header>
-          <nav className="max-w-5xl mx-auto flex justify-between items-center pt-4">
+        <header className="border-b border-gray-200 space-y-2">
+          <nav className="max-w-5xl mx-auto px-6 flex justify-between items-center pt-4">
             {/* 最上面导航，左侧 */}
             <div className="flex items-center space-x-2">
-              <VercelLogo className="h-6" />
+              <Link href="#">
+                <a>
+                  <VercelLogo className="h-6" />
+                </a>
+              </Link>
+
               <span>
                 <svg
                   className="h-8 w-8 text-gray-300"
@@ -62,29 +67,55 @@ export default function Home() {
 
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-5">
-                <button type='button'  className="border border-gray-200 rounded px-3 py-1.5 text-sm leading-5 text-gray-600 hover:border-black transition ease-in-out duration-200" >
+                <button type='button' className="border border-gray-200 rounded px-3 py-1.5 text-sm leading-5 text-gray-500 hover:border-black transition ease-in-out duration-200" >
                   Feedback
                 </button>
                 <Link href="#">
-                  <a className="inline-block text-sm leading-5 text-gray-600 hover:text-black transition ease-in-out duration-200">Blog</a>
+                  <a className="inline-block text-sm leading-5 text-gray-500 hover:text-black transition ease-in-out duration-200">Blog</a>
                 </Link>
                 <Link href="#">
-                  <a className="inline-block text-sm leading-5 text-gray-600 hover:text-black transition ease-in-out duration-200">Support</a>
+                  <a className="inline-block text-sm leading-5 text-gray-500 hover:text-black transition ease-in-out duration-200">Support</a>
                 </Link>
                 <Link href="#">
-                  <a className="inline-block text-sm leading-5 text-gray-600 hover:text-black transition ease-in-out duration-200">Docs</a>
+                  <a className="inline-block text-sm leading-5 text-gray-500 hover:text-black transition ease-in-out duration-200">Docs</a>
                 </Link>
               </div>
-             
               <button type="button">
-                <DotsHorizontal className="h-5 w-5 text-gray-400"/>
+                <DotsHorizontal className="h-5 w-5 text-gray-400" />
               </button>
               <button type="button">
-                <Avatar src="/avatar.svg" alt="" /> 
+                <Avatar src="/avatar.svg" alt="" />
               </button>
             </div>
           </nav>
+{/* 第二个导航条开始 */}
+          <div className="max-w-5xl mx-auto px-6">
+            <nav className="-mb-px flex space-x-5 text-sm leading-5">
+              <Link href="#">
+                <a className="border-b-2 border-black px-0.5 py-3 text-black ">Overview</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Projects</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Integrations</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Activity</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Domains</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Usage</a>
+              </Link>
+              <Link href="#">
+                <a className="border-b-2 border-transparent px-0.5 py-3 text-gray-500 hover:text-black transition ease-in-out duration-200">Settings</a>
+              </Link>
+            </nav>
+          </div>
         </header >
+        {/* 最上面导航部分结束 */}
       </ div >
     </div>
 
