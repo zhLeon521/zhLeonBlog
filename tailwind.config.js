@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-30 13:50:26
- * @LastEditTime: 2021-05-30 15:53:57
+ * @LastEditTime: 2021-05-31 23:52:21
  * @FilePath: \zhleon\tailwind.config.js
  */
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'html': ['font-serif'],
+        'sans': ['ui-serif', 'Georgia',],
       },
     },
   },

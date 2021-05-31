@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-28 11:49:21
- * @LastEditTime: 2021-05-30 23:46:24
+ * @LastEditTime: 2021-05-31 23:40:36
  * @FilePath: \zhleon\pages\index.js
  */
 import SelectorIcon from 'heroicons/outline/selector.svg';
@@ -133,14 +133,15 @@ export default function Home() {
               <div >
                 <dl>
                   <Link href="https://github.com/zhLeon521" >
-                    <a target="_blank" className="flex items-center space-x-2 text-sm leading-5 font-bold text-gray-500">
-                      <img className="h-3.5 w-3.5" src="/github.svg" alt="githubLogo" />
+                    <a target="_blank" className="flex items-center justify-items-start space-x-2 text-sm leading-5 font-bold text-gray-500">
+                      <img className="h-4 w-4" src="/github.svg" alt="githubLogo" />
                       <span>zhLeon521</span>
                     </a>
                   </Link>
 
-                  <dd className="text-xs leading-5 font-bold text-black uppercase tracking-wide">
-                    🤣 FullStack Developer
+                  <dd className="mt-px flex items-center justify-items-start space-x-1.5 text-xs leading-5 font-bold text-black uppercase tracking-wide">
+                    <span>🤣</span>
+                    <span>FullStack Developer</span>
                   </dd>
                 </dl>
               </div>
@@ -160,6 +161,83 @@ export default function Home() {
 
         </div>
       </ div >
+
+      {/* 下面的主页面 */}
+
+      <div className="bg-gray-50">
+        <main className="max-w-5xl mx-auto px-6 grid grid-cols-12 gap-20">
+          <div className="col-span-7 -mt-9">
+            <h2 className="sr-only">Recent Projects</h2>
+            <ul>
+              <li>
+
+                <div className="divide-y divide-gray-200 rounded-lg bg-white shadow-lg overflow-hidden">
+                  <div className="p-6 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-semibold">zhLeon521's Blog</h3>
+                      <a href="#"
+                        className="border border-gray-300 rounded px-5 py-1.5 font-medium text-sm leading-5 text-gray-600 hover:border-black hover:text-black hover:font-medium transition ease-in-out duration-200" >
+                        Visit
+                          </a>
+                    </div>
+                    {/* 小绿点哪个部分 */}
+                    <div aria-label="Production deployment" className="flex items-center space-x-3 ">
+                      <Link href="#">
+                        <a className="inline-flex items-center space-x-2 text-sm leading-5 font-medium">
+                          <span aria-hidden
+                            className="mt-px inline-block h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                          <span>zhleon521Blueheart.com</span>
+                        </a>
+                      </Link>
+                      <span className="inline-flex rounded-full bg-gray-50 border border-gray-200 px-1.5 py-px text-xs leading-4 font-medium ">
+                        Production</span>
+                      <span className="text-sm leading-4 text-gray-400">
+                        <time dateTime="2020-11-12">200d</time>
+                      </span>
+                    </div>
+
+                    <div aria-label="Latest deployment" className="flex items-center space-x-3 ">
+                      <Link href="#">
+                        <a className="inline-flex items-center space-x-2 text-sm leading-5 font-medium">
+                          <span aria-hidden
+                            className="mt-px inline-block h-2.5 w-2.5 rounded-full bg-green-300"></span>
+                          <span>zhLeon521's Blog.dev.now.sh</span>
+                        </a>
+                      </Link>
+                      <span className="inline-flex rounded-full bg-gray-50 border border-gray-200 px-1.5 py-px text-xs leading-4 font-medium ">
+                        Latest</span>
+                      <span className="text-sm leading-4 text-gray-400">
+                        <time dateTime="2021-5-31">1d</time>
+                      </span>
+                    </div>
+
+
+                  </div>
+
+                  <div className="px-6 py-3">
+                    <Link href="https://github.com/zhLeon521" >
+                      <a target="_blank" className="flex inline-flex items-center space-x-2 text-sm leading-5 font-medium text-gray-400">
+                        <img className="h-4 w-4" src="/github.svg" alt="githubLogo" />
+                        <span>zhLeon521/zhLeon521's Blog</span>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+
+
+
+              </li>
+            </ul>
+          </div>
+
+
+
+          <div className="col-col-span-5 -mt-9">
+            <h2>Recent Activity</h2>
+          </div>
+
+        </main>
+      </div >
     </div >
 
 
