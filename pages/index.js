@@ -2,7 +2,7 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-28 11:49:21
- * @LastEditTime: 2021-06-01 13:15:44
+ * @LastEditTime: 2021-06-01 13:40:07
  * @FilePath: \zhLeonBlog\pages\index.js
  */
 import SelectorIcon from 'heroicons/outline/selector.svg';
@@ -274,42 +274,48 @@ export default function Home() {
 
           <div className="col-span-5 -mt-10 pt-3">
             <h2 className="text-base leading-5 font-bold">Recent Activity</h2>
-            <ul className="pt-5 divide-y divide-gray-200">
-              <li className="py-2">
-                <ActivityFeedback who="Wang Dazhu" doing="The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback who="You" doing="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback doing="Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback doing="Premature optimization is the root of all evil." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback who="Wang Dazhu" doing="The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback who="You" doing="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback doing="Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback doing="Premature optimization is the root of all evil." />
-              </li>
-              <li className="py-2">
-                <ActivityFeedback />
-              </li>
+            <div className="space-y-6">
+              <ul className="pt-5 divide-y divide-gray-200  border-b border-gray-200">
+                <li className="py-2">
+                  <ActivityFeedback who="Wang Dazhu" doing="The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback who="You" doing="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback doing="Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback doing="Premature optimization is the root of all evil." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback who="Wang Dazhu" doing="The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback who="You" doing="Any fool can write code that a computer can understand. Good programmers write code that humans can understand." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback doing="Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback doing="Premature optimization is the root of all evil." />
+                </li>
+                <li className="py-2">
+                  <ActivityFeedback />
+                </li>
+              </ul>
+              <div>
+                <Link href="#">
+                  <a className="text-sm leading-5 font-bold text-blue-500 hover:underline">
+                    View All Activities
+                    </a>
+                </Link>
+              </div>
+            </div>
 
-
-
-
-            </ul>
           </div>
 
         </main>
