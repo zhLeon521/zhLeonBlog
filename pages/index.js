@@ -2,11 +2,13 @@
  * @Description: 
  * @Autor: Blueheart
  * @Date: 2021-05-28 11:49:21
- * @LastEditTime: 2021-06-01 13:40:07
+ * @LastEditTime: 2021-06-01 17:29:17
  * @FilePath: \zhLeonBlog\pages\index.js
  */
 import SelectorIcon from 'heroicons/outline/selector.svg';
 import DotsHorizontal from 'heroicons/solid/dots-horizontal.svg'
+import CogIcon from 'heroicons/outline/cog.svg'
+import PlusIcon from 'heroicons/outline/plus.svg'
 import Link from 'next/link';
 
 function VercelLogo({ className }) {
@@ -103,6 +105,71 @@ function ActivityFeedback({ who = "zhLeon", doing = "If it hurts, do it more oft
   )
 }
 
+
+function AccountSwitcher() {
+  return (
+
+    <div className="relative">
+      <span className="inline-flex items-center space-x-2 " >
+        <Link href="#">
+          <a className="inline-flex items-center space-x-2">
+            <span>
+              <Avatar src="/avatar.svg" alt="" />
+            </span>
+            <span className="text-sm text-black-300 font-semibold antialiased">Blueheart</span>
+          </a>
+        </Link>
+        <button className="inline-flex items-center border rounded border-transparent p-0.6 hover:border-gray-200 hover:boder-gray-50 transition ease-in-out duration-200">
+          <SelectorIcon className="h-5 w-5 text-gray-300 " />
+        </button>
+      </ span>
+
+      <div className="absolute w-56 rounded-md divide-y divide-gray-200 bg-white shadow-lg overflow-hidden">
+        <div className="py-1.5">
+          <div className="pt-3 px-4 pb-2 text-xs leading-5 uppercase font-medium tracking-wide text-gray-700">
+            Personal account
+            </div>
+          <ul>
+            <li className="px-4 py-2 bg-gray-50">
+              <div className="flex items-center justify-between space-x-4">
+                <Link href="#">
+                  <a className="flex items-center space-x-3 text-sm text-gray-500 hover:text-black leading-5">
+                    <img className="h-5 w-5 rounded-full" src="/Avatar.svg" />
+                    <span>Blueheart</span>
+                  </a>
+                </Link>
+                <div>
+                  <Link href="#">
+                    <a >
+                      <CogIcon className="h-5 w-5 text-gray-400" />
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+        <div className="py-1.5">
+          <Link href="#">
+            <a className="px-4 flex items-center justify-between text-sm ">
+              <span className="text-gray-500 hover:text-black">Create a Team</span>
+              <PlusIcon className="h-6 w-6 text-gray-500 hover:text-black" />
+            </a>
+          </Link>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  )
+}
+
 export default function Home() {
   return (
     <div>
@@ -127,19 +194,8 @@ export default function Home() {
                 </svg>
               </span>
               {/* 最上面logo + 姓名文字 */}
-              <span className="inline-flex items-center space-x-2 ">
-                <Link href="#">
-                  <a className="inline-flex items-center space-x-2">
-                    <span>
-                      <Avatar src="/avatar.svg" alt="" />
-                    </span>
-                    <span className="text-sm text-black-300 font-semibold antialiased">Blueheart  Leon</span>
-                  </a>
-                </Link>
-                <button className="inline-flex items-center border rounded border-transparent p-0.6 hover:border-gray-200 hover:boder-gray-50 transition ease-in-out duration-200">
-                  <SelectorIcon className="h-5 w-5 text-gray-300 " />
-                </button>
-              </span>
+
+              <AccountSwitcher />
             </div>
 
             <div className="flex items-center space-x-4">
