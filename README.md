@@ -3,7 +3,7 @@
 利用Next.js + Tailwind CSS开发个人项目网站，目前仿Vercel.com.
 
 ## 项目截图
-![项目截图](../zhLeonBlog/MarkdownFig/WebSite预览.png)
+![项目截图](/MarkdownFig/WebSite预览.png)
 
 ## How to use
 
